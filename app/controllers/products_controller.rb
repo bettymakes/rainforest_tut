@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id] )
 
       respond_to do |format|
         if @product.update_attributes(params[:product])
