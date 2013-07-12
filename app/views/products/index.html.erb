@@ -2,9 +2,9 @@
 <p>See all products here!</p>
 <%= link_to "Add new product", new_product_path %>
 <% @products.each do |product|%>
-  <p>Product Name: <%= product[:name] %></p>
-  <p>Product Description: <%= product[:description] %></p>
-  <p>Price: $<%= product[:price_in_cents]/100.00 %></p>
+  <p>Product Name: <%= product.name %></p>
+  <p>Product Description: <%= product.description %></p>
+  <p>Price: $<%= product.formatted_price%></p>
   <p><%= link_to "Show Product", product_path(product) %> | <%= link_to 'Edit Entry', edit_product_path(product) %> | <%= link_to 'Delete Entry', product, :method => :delete %></p>
 <% end %>
 
